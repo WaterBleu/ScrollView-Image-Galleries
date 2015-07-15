@@ -17,20 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-YW-RyJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.5" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-YW-RyJ">
+                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-YJ-4c6">
+                                        <rect key="frame" x="0.0" y="0.0" width="960" height="540"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wSc-YJ-4c6" secondAttribute="trailing" id="3VH-x8-lTy"/>
+                                    <constraint firstAttribute="bottom" secondItem="wSc-YJ-4c6" secondAttribute="bottom" id="LqN-0R-tVg"/>
+                                    <constraint firstItem="wSc-YJ-4c6" firstAttribute="leading" secondItem="qqp-YW-RyJ" secondAttribute="leading" id="rRq-QK-gdG"/>
+                                    <constraint firstItem="wSc-YJ-4c6" firstAttribute="top" secondItem="qqp-YW-RyJ" secondAttribute="top" id="ukZ-wv-5jM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="rVK-5l-x9D" id="xAz-9F-bEM"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qqp-YW-RyJ" firstAttribute="leading" secondItem="coJ-z2-gKw" secondAttribute="leadingMargin" constant="-16" id="GZW-CQ-34v"/>
-                            <constraint firstItem="6MB-7c-w49" firstAttribute="top" secondItem="qqp-YW-RyJ" secondAttribute="bottom" id="KAD-7U-4Dn"/>
-                            <constraint firstAttribute="centerY" secondItem="qqp-YW-RyJ" secondAttribute="centerY" id="M7C-6L-jCt"/>
-                            <constraint firstAttribute="centerX" secondItem="qqp-YW-RyJ" secondAttribute="centerX" id="MnG-6j-HMW"/>
-                            <constraint firstItem="qqp-YW-RyJ" firstAttribute="top" secondItem="coJ-z2-gKw" secondAttribute="topMargin" id="sNE-Cu-Nnm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qqp-YW-RyJ" secondAttribute="trailing" constant="-16" id="vnI-K9-n6a"/>
+                            <constraint firstItem="qqp-YW-RyJ" firstAttribute="top" secondItem="Igi-BF-deb" secondAttribute="bottom" id="68a-0f-Irs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qqp-YW-RyJ" secondAttribute="trailing" id="I6X-kT-LEG"/>
+                            <constraint firstItem="qqp-YW-RyJ" firstAttribute="leading" secondItem="coJ-z2-gKw" secondAttribute="leadingMargin" id="YyF-w3-oup"/>
+                            <constraint firstItem="6MB-7c-w49" firstAttribute="top" secondItem="qqp-YW-RyJ" secondAttribute="bottom" id="gwK-MB-p6M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="uiScrollDetailView" destination="qqp-YW-RyJ" id="v57-oa-kK4"/>
+                        <outlet property="zoomView" destination="wSc-YJ-4c6" id="TVp-qX-sac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKq-Kb-afB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,4 +84,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lighthouse-in-Field" width="960" height="540"/>
+    </resources>
 </document>
