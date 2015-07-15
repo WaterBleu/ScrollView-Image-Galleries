@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rVK-5l-x9D">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Image Detail View Controller-->
+        <scene sceneID="xCQ-lK-ZMR">
+            <objects>
+                <viewController id="rVK-5l-x9D" customClass="ImageDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Igi-BF-deb"/>
+                        <viewControllerLayoutGuide type="bottom" id="6MB-7c-w49"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="coJ-z2-gKw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-YW-RyJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qqp-YW-RyJ" firstAttribute="leading" secondItem="coJ-z2-gKw" secondAttribute="leadingMargin" constant="-16" id="GZW-CQ-34v"/>
+                            <constraint firstItem="6MB-7c-w49" firstAttribute="top" secondItem="qqp-YW-RyJ" secondAttribute="bottom" id="KAD-7U-4Dn"/>
+                            <constraint firstAttribute="centerY" secondItem="qqp-YW-RyJ" secondAttribute="centerY" id="M7C-6L-jCt"/>
+                            <constraint firstAttribute="centerX" secondItem="qqp-YW-RyJ" secondAttribute="centerX" id="MnG-6j-HMW"/>
+                            <constraint firstItem="qqp-YW-RyJ" firstAttribute="top" secondItem="coJ-z2-gKw" secondAttribute="topMargin" id="sNE-Cu-Nnm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qqp-YW-RyJ" secondAttribute="trailing" constant="-16" id="vnI-K9-n6a"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKq-Kb-afB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="320"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

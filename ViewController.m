@@ -10,7 +10,6 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *uiScrollerView;
-@property (strong, nonatomic) NSArray *imgArray;
 
 @end
 
@@ -19,9 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.imgArray = @[[UIImage imageNamed:@"Lighthouse-in-Field"],
-                      [UIImage imageNamed:@"Lighthouse-night"],
-                      [UIImage imageNamed:@"Lighthouse-zoomed"]];
     
     UIImage *img = [UIImage imageNamed:@"Lighthouse-in-Field"];
     UIImageView *imagePlaceholder1 = [[UIImageView alloc] initWithImage:img];
